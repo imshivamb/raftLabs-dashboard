@@ -1,19 +1,16 @@
 import Header from "@/components/Header";
 import Main from "@/components/Main";
-import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import Sidebar from "@/components/Sidebar";
 
 export default function Home() {
   return (
-    <MaxWidthWrapper>
-      <div className="bg-white mt-8 rounded-md shadow-sm flex h-full">
-        <Sidebar />
+    <div className="bg-white mt-4 rounded-md shadow-sm flex">
+      <Sidebar />
 
-        <div className="flex-1 p-4">
-          <Header />
-          <Main />
-        </div>
+      <div className="lg:flex-1 p-0 lg:p-4">
+        <Header />
+        <Main />
       </div>
-    </MaxWidthWrapper>
+    </div>
   );
 }

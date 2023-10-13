@@ -29,7 +29,7 @@ const WeeklyCalendar = () => {
         </div>
         <div
           className={`date text-xs font-medium ${
-            isActive ? "text-white rounded-full bg-blue-500" : ""
+            isActive ? "text-white rounded-full bg-blue-500 " : ""
           }`}
         >
           {date.format("D")}

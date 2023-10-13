@@ -32,14 +32,16 @@ const Tasks = () => {
                   <span className="text-[13px] font-bold">{item.title}</span>
                 }
                 description={
-                  <p className="text-xs flex justify-between ">
-                    <VideoCameraOutlined className="mr-1" />
-                    Google Meet{" "}
+                  <div className="text-xs flex justify-between ">
+                    <p>
+                      <VideoCameraOutlined className="mr-1" />
+                      Google Meet{" "}
+                    </p>
                     <span className="ml-8">
                       <ClockCircleOutlined className="mr-1" />
                       {item.time}
                     </span>
-                  </p>
+                  </div>
                 }
               />
             </List.Item>

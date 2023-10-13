@@ -6,12 +6,11 @@ import {
   Badge,
   Button,
   Col,
+  Input,
   Popover,
   Progress,
-  Input,
   Row,
   Select,
-  Divider,
 } from "antd";
 const { Option } = Select;
 
@@ -31,8 +30,8 @@ const Header: React.FC = () => {
   );
   return (
     <header className=" mt-4 ml-6 w-full ">
-      <Row>
-        <Col span={17} className="hidden lg:block">
+      <Row className="flex flex-col md:flex-row">
+        <Col span={17} md={17} className=" order-2 md:order-1">
           <div className="flex items-center justify-between mr-0">
             <div className="flex items-start">
               <Badge count={3} color="blue" offset={[-7, 7]}>
@@ -52,26 +51,33 @@ const Header: React.FC = () => {
                 </p>
               </div>
             </div>
-            <Popover
-              placement="left"
-              content={content}
-              trigger="click"
-              visible={searchVisible}
-              onVisibleChange={toggleSearch}
-            >
-              <Button
-                className="bg-gray-100 text-gray-600"
-                shape="circle"
-                icon={<SearchOutlined />}
-              />
-            </Popover>
           </div>
         </Col>
-        <Col span={7} className=" flex items-center ">
+        <Col
+          span={17}
+          md={7}
+          className="order-1 md:order-2 flex mx-auto items-center justify-center md:justify-start mb-6 mt-2 md:mt-0 md:mb-0"
+        >
+          <Popover
+            placement="left"
+            content={content}
+            trigger="click"
+            open={searchVisible}
+            onOpenChange={toggleSearch}
+          >
+            <Button
+              className="bg-gray-100 text-gray-600"
+              shape="circle"
+              icon={<SearchOutlined />}
+            />
+          </Popover>
           <Badge dot offset={[-3, 4]} status="processing" size="default">
             <BellOutlined className="text-gray-500 text-lg ml-8 cursor-pointer hover:scale-110" />
           </Badge>
-          <Select className=" shadow-sm ml-28 rounded-xl" defaultValue="Shivam">
+          <Select
+            className=" shadow-sm ml-8 md:ml-12 lg:ml-16 rounded-xl"
+            defaultValue="Shivam"
+          >
             <Option value="Shivam">
               <Avatar
                 src="/avatarone.jpg"

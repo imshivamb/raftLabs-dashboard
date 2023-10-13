@@ -18,7 +18,9 @@ const columns: ColumnsType<DataType> = [
   {
     title: "Customer",
     dataIndex: "customer",
+
     key: "customer",
+
     width: 280,
     render: (customers) => (
       <List
@@ -29,10 +31,14 @@ const columns: ColumnsType<DataType> = [
             <List.Item.Meta
               avatar={<Avatar size={35} src={`/avatarone.jpg`} />}
               title={
-                <span className="text-[13px] font-bold">{item.title}</span>
+                <span className="text-[13px] font-bold line-clamp-1">
+                  {item.title}
+                </span>
               }
               description={
-                <span className="text-xs">shivambhardwaj1503@gmail.com</span>
+                <span className="text-xs line-clamp-1">
+                  shivambhardwaj1503@gmail.com
+                </span>
               }
             />
           </List.Item>
@@ -49,7 +55,7 @@ const columns: ColumnsType<DataType> = [
       <Badge
         status={text === "success" ? "success" : "warning"}
         text={text}
-        className="rounded-full border-1 border-gray-300 shadow-md px-1 py-1"
+        className="rounded-full border-1  border-gray-300 shadow-md px-1 py-1"
       />
     ),
   },
@@ -69,8 +75,8 @@ const columns: ColumnsType<DataType> = [
     key: "people",
     render: () => (
       <Avatar.Group>
-        <Avatar src="https://xsgames.co/randomusers/avatar.php?g=pixel&key=1" />
-        <a href="https://ant.design">
+        <Avatar src="/avatarone.jpg" />
+        <a href="https://google.com">
           <Avatar style={{ backgroundColor: "#f56a00" }}>K</Avatar>
         </a>
         <Tooltip title="Ant User" placement="top">
@@ -179,7 +185,12 @@ const Transactions: React.FC = () => {
         />
       </div>
       <div>
-        <Table columns={columns} pagination={false} dataSource={data} />
+        <Table
+          columns={columns}
+          pagination={false}
+          dataSource={data}
+          scroll={{ x: true }}
+        />
       </div>
     </div>
   );

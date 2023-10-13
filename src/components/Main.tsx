@@ -25,9 +25,9 @@ const Main = () => {
     return null;
   }
   return (
-    <section className="px-8 py-6 mx-auto flex-wrap">
-      <Row className="flex flex-col lg:flex-row">
-        <Col span={17}>
+    <section className="px-4 lg:px-8 py-6 mx-auto flex-wrap">
+      <Row className="flex flex-col md:flex-row">
+        <Col span={17} md={17}>
           <Statistics />
           <div className="my-8">
             <Data />
@@ -36,8 +36,8 @@ const Main = () => {
             <Transactions />
           </div>
         </Col>
-        <Col span={7}>
-          <div className="ml-8 mr-6 px-2 flex-col items-start justify-between pb-2">
+        <Col span={17} md={7}>
+          <div className="ml-8 mr-2 mt-4 md:mt-0 px-2 flex-col items-start justify-between pb-2">
             <Link
               href="/premium"
               target="_blank"

@@ -2,8 +2,7 @@
 
 import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from "recharts";
 
-import { Divider, Select } from "antd";
-import React from "react";
+import { Select } from "antd";
 const data = [
   {
     name: "Jan",
@@ -33,7 +32,7 @@ const data = [
 
 const Graph = () => {
   return (
-    <div className="flex flex-col justify-between">
+    <div className="flex flex-col mx-auto justify-between">
       <div className="flex items-center justify-between">
         <h5 className="font-semibold text-sm">
           Analytic <span className="text-green-600">+5.4%</span>

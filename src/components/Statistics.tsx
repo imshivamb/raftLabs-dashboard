@@ -2,8 +2,8 @@ import { Avatar, Badge } from "antd";
 
 const Statistics = () => {
   return (
-    <div className="rounded-xl lg:flex-row flex-col bg-[#8150f2]">
-      <div className=" mx-auto flex items-center justify-between">
+    <div className="rounded-xl bg-[#8150f2]">
+      <div className=" mx-auto flex md:flex-row flex-col items-center justify-between">
         <div className="px-4 py-5 mx-auto flex flex-row items-center">
           <Avatar src="/avatarone.jpg" size={45} className="mx-2" />
           <div className="flex-col items-center">
